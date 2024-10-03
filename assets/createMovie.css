@@ -1,0 +1,61 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif; /* Font for the whole page */
+    background-color: #f4f7fa; /* Light background color */
+    color: #333; /* Dark text color */
+}
+
+.create-movie {
+    max-width: 600px; /* Max width for the form container */
+    margin: 100px auto; /* Center horizontally and add top margin */
+    padding: 20px; /* Padding around the container */
+    background-color: #fff; /* White background for the form */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+}
+
+h2 {
+    text-align: center; /* Center the heading */
+    color: #333; /* Darker color for the heading */
+}
+
+.site-form {
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack children vertically */
+}
+
+.form-group {
+    margin-bottom: 15px; /* Space between form elements */
+}
+
+label {
+    margin-bottom: 5px; /* Space below labels */
+    font-weight: bold; /* Bold labels */
+}
+
+input[type="text"],
+input[type="email"],
+input[type="file"],
+textarea {
+    padding: 10px; /* Padding for inputs */
+    margin-top: 5px; /* Space above inputs */
+    border: 1px solid #ccc; /* Light border for inputs */
+    border-radius: 4px; /* Rounded corners */
+    width: 100%; /* Full width for inputs */
+    box-sizing: border-box; /* Include padding in width */
+}
+
+input[type="submit"] {
+    background-color: #007bff; /* Primary button color */
+    color: white; /* White text for the button */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-weight: bold; /* Bold text */
+    padding: 10px; /* Padding for the button */
+    border: none; /* Remove border */
+    border-radius: 4px; /* Rounded corners */
+    transition: background-color 0.3s; /* Smooth background change */
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}

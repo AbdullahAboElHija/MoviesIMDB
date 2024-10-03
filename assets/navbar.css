@@ -1,0 +1,48 @@
+body {
+    margin: 0; /* Remove default body margin */
+    background: #666666;
+}
+
+.navbar {
+    position: fixed; /* Fix the navbar to the top of the viewport */
+    top: 0; /* Align it to the top */
+    left: 0; /* Align it to the left */
+    width: 100%; /* Make it full-width */
+    background-color: #333; /* Background color */
+    color: white; /* Text color */
+    z-index: 1000; /* Ensure it is above other elements */
+}
+
+.navbar-container {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space out items */
+    align-items: center; /* Center items vertically */
+    padding: 15px 30px; /* Increase padding for a larger navbar */
+}
+
+.navbar-links {
+    list-style: none; /* Remove bullet points */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+    display: flex; /* Use flexbox for the links */
+}
+
+.navbar-links li {
+    margin-left: 30px; /* Increase space between links */
+}
+
+.navbar-links a {
+    color: white; /* Link color */
+    text-decoration: none; /* Remove underline from links */
+    font-size: 18px; /* Increase font size */
+    padding: 10px; /* Add padding for larger clickable area */
+}
+
+.logout-link button {
+    background: none; /* No background */
+    border: none; /* Remove border */
+    color: white; /* Button text color */
+    cursor: pointer; /* Show pointer on hover */
+    font-size: 18px; /* Increase button font size */
+    padding: 10px; /* Add padding for larger button */
+}

@@ -1,0 +1,23 @@
+
+{% extends 'base_layout.html' %}
+
+{% load static %}
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'createMovie.css' %}">
+{% endblock %}
+
+{% block content %}
+
+
+
+<div class="create-movie">
+    <h2>Create a new article</h2>
+    <form class="site-form" action="{% url 'movies:create' %}" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{form}}
+        <input type="submit" value="Create">
+    </form>
+</div>
+
+
+{% endblock %}

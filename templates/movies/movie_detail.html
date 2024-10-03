@@ -1,0 +1,51 @@
+{% extends 'base_layout.html' %}
+
+{% load static %}
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'movie_detail.css' %}">
+
+
+{% endblock %}
+
+
+{% block content %}
+
+<div class="movie-detail">
+    <div class="movie-poster">
+        <img src="{{ movie.thumb.url }}" alt="{{ movie.title }}">
+    </div>
+    <div class="movie-info">
+        <h2 class="movie-title">{{ movie.title }}</h2>
+        <p class="description">{{ movie.description }}</p>
+        <p><strong>Directed by:</strong> {{ movie.director }}</p>
+        <p><strong>Cast:</strong> {{ movie.actors }}</p>
+        <p><strong>Release Date:</strong> {{ movie.release_date }}</p>
+    </div>
+</div>
+
+<div class="reviews">
+    <h3>Reviews</h3>
+    {% for review in reviews %}
+        <div class="review">
+            <p><strong>{{ review.user.username }}</strong>: {{ review.content }}</p>
+            <p><em>{{ review.created_at }}</em></p>
+        </div>
+    {% empty %}
+        <p>No reviews yet.</p>
+    {% endfor %}
+</div>
+
+{% if user.is_authenticated %}
+    <div class="review-form">
+        <h3>Add a Review</h3>
+        <form action="" method="post">
+            {% csrf_token %}
+            {{ review_form.as_p }}
+            <input type="submit" value="Submit Review">
+        </form>
+    </div>
+{% else %}
+    <p>You must be logged in to leave a review.</p>
+{% endif %}
+
+{% endblock %}
