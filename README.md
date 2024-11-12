@@ -7,29 +7,38 @@ Open a terminal and run the following command to clone the repository:
 git clone https://github.com/AbdullahAboElHija/MoviesIMDB.git
 
 cd MoviesIMDB
+# you can run or from the docker like this : 
+#### 1.1 open the terminal
 
-#### 3. Create a Virtual Environment
+#### 1.2 build docker image
+docker build -t my-docker-image .
+#### 1.2 build and run container 
+docker compose up -d
+
+
+# the second way to run it :
+#### 1.1 Create a Virtual Environment
 It's recommended to use a virtual environment for managing dependencies. Run the following command to create one:
 python3 -m venv venv
 
 
-#### 4. Activate the Virtual Environment
+#### 1.2 Activate the Virtual Environment
 venv\Scripts\activate
 
-#### 5. Install the Dependencies
+#### 1.3 Install the Dependencies
 Once the virtual environment is activated, install the required packages by running:
 pip install -r requirements.txt
 
-#### 6. Apply Migrations
+#### 1.4 Apply Migrations
 Run Django migrations to set up the database:
 python manage.py migrate
 
 
-#### 7. Run the Development Server
+#### 1.5 Run the Development Server
 Start the Django development server:
 python manage.py runserver
 
-#### 8. Access the Application
+#### 1.6 Access the Application
 Once the server is running, open your web browser and go to:
 http://127.0.0.1:8000/
 
