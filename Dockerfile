@@ -8,6 +8,9 @@ RUN apt-get update
 # Copy the requirements file into the container
 COPY requirement.txt .
 
+RUN apt-get update
+RUN apt-get install gcc default-libmysqlclient-dev -y
+
 # Install dependencies
 RUN pip install --no-cache-dir -r requirement.txt
 
@@ -20,4 +23,4 @@ EXPOSE 8000
 
 
 # Default command to run the Django server
-CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
+CMD ["sh", "start_django.sh"]
