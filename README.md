@@ -10,10 +10,8 @@ cd MoviesIMDB
 # you can run or from the docker like this : 
 #### 1.1 open the terminal
 
-#### 1.2 build docker image
-docker build -t my-docker-image .
-#### 1.2 build and run container 
-docker compose up -d
+#### 1.2 build and run docker compose 
+docker compose up --build
 
 
 # the second way to run it :
