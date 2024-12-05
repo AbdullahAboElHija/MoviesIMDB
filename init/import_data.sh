@@ -26,7 +26,7 @@ fi
 
 # Check if the database is ready
 echo "Waiting for MySQL to initialize the database..."
-until mysql -h db -u$SQL_USER -p$SQL_PASSWORD -e "USE $SQL_DATABASE"; do
+until mysql -h $SQL_HOST -u$SQL_USER -p$SQL_PASSWORD -e "USE $SQL_DATABASE"; do
   echo "Database not yet available. Waiting..."
   sleep 5
 done
